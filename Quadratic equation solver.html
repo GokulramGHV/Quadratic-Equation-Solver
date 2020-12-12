@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quadratic Equation Solver</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg">
+
+<form name="val" class="form">
+<h1>Quadratic Equation Solver</h1>
+ <h3>               -by A GokulRam</h3> 
+ <br>
+    <div class="e">	
+    	<input type="text" name="a" size="1" class="a" placeholder="a"> X<sup>2</sup> + <input type="text" name="b" size="1" class="b" placeholder="b"> X + <input type="text" name="c" size="1" class="c" placeholder="c"> = 0
+    </div>
+
+	<br>
+	<br>
+   <a href="#" class="btn btn-inline btn-large btn-success" onclick="solve()"><span>Calculate</span></a>
+    <br>
+    
+    <div class="p">
+    <p id="Root1"><b></b></p>
+    <p id="Root2"><b></b></p>
+    </div>
+
+</form>
+
+</div>
+
+
+<script type="text/javascript">
+	
+	function solve() {
+
+		var a, b, c, result;
+		a=Number(document.val.a.value);
+		b=Number(document.val.b.value);
+		c=Number(document.val.c.value);
+		result=((0-b)+Math.sqrt((b*b)-(4*a*c)))/(2*a);
+		document.getElementById('Root1').innerHTML="Root1: "+result;
+		result1=((0-b)-Math.sqrt((b*b)-(4*a*c)))/(2*a);
+		document.getElementById('Root2').innerHTML="Root2: "+result1;
+	}
+
+</script>
+	
+
+
+</body>
